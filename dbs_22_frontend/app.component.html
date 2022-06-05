@@ -1,0 +1,13 @@
+<div class='d0'><h1>Welcome</h1></div>
+<div class='d0'><button (click)="clear_data()">Clear</button></div>
+<div class='d0'><button (click)="show_data_8()">show researchers on >=5 proj. without deliverables</button></div>
+<div class='d0'><button (click)="show_data_2_0()">get researchers-projects</button></div>
+<div class='d0'><button (click)="show_data_2_1()">get organisations-projects</button></div>
+<div class='d0'><button (click)="show_data_4()">get organisations with the same amount of projects for 2 years</button></div>
+<div class='d0'><button (click)="show_data_5()">show top 3 science field pairs</button></div>
+<div class='d0'><button (click)="show_data_6()">show young researchers and number of projects</button></div>
+<div class='d0'><button (click)="show_data_7()">show top 5 executives/companies funded</button></div>
+<div class='d0'><input #box (keyup)="show_data_3(box.value)" placeholder="show projects/researchers on a field"></div>
+<div class='d0'><input #box1 (keyup)="show_data_1(box1.value,box2.value,box3.value)" placeholder="date"><input #box2 (keyup)="show_data_1(box1.value,box2.value,box3.value)" placeholder="duration(days)"><input #box3 (keyup)="show_data_1(box1.value,box2.value,box3.value)" placeholder="executive id"></div>
+<div class='d0' *ngIf="sample_data=='4'"><h2>Organisation IDs:</h2></div>
+<div class='d0'><h3 *ngFor="let tst of test0|keyvalue">{{tst.value|json}}</h3></div>
